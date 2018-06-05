@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/game_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFCA28"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/topBarGameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/pauseButtonGameLayout"
+            style="@style/CleanOrange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#000000"
+            android:onClick="pauseGame"
+            android:text="@string/pause"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/scoreTextViewGameLayout"
+            style="@style/CleanOrange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="16dp"
+            android:background="#000000"
+            android:text="@string/score"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/turnTextViewGameLayout"
+            style="@style/CleanOrange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_toEndOf="@+id/scoreTextViewGameLayout"
+            android:layout_toRightOf="@id/scoreTextViewGameLayout"
+            android:background="#000000"
+            android:text="@string/turn"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/gameFieldImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/controlBarGameLayout"
+        android:layout_below="@+id/topBarGameLayout"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:background="#FFFFFF"
+        android:cropToPadding="true"
+        android:padding="4dp"
+        android:scaleType="fitCenter" />
+
+    <RelativeLayout
+        android:id="@+id/controlBarGameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/moveTopButtonGameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/arrow_top_24dp"
+            android:onClick="topPressed" />
+
+        <Button
+            android:id="@+id/moveBotButtonGameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/moveTopButtonGameLayout"
+            android:layout_centerInParent="true"
+            android:background="@drawable/arrow_bottom_24dp"
+            android:onClick="botPressed" />
+
+        <Button
+            android:id="@+id/moveLeftButtonGameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/moveTopButtonGameLayout"
+            android:layout_toLeftOf="@id/moveBotButtonGameLayout"
+            android:layout_toStartOf="@+id/moveBotButtonGameLayout"
+            android:background="@drawable/arrow_left_24dp"
+            android:onClick="leftPressed" />
+
+        <Button
+            android:id="@+id/moveRightButtonGameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/moveTopButtonGameLayout"
+            android:layout_toEndOf="@+id/moveBotButtonGameLayout"
+            android:layout_toRightOf="@id/moveBotButtonGameLayout"
+            android:background="@drawable/arrow_right_24dp"
+            android:onClick="rightPressed" />
+    </RelativeLayout>
+</RelativeLayout>

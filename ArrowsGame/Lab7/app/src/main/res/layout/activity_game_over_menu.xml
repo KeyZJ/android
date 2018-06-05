@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFB300"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/results"
+        style="@style/CleanOrange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/score"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+    <TextView
+        style="@style/CleanOrange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:text="@string/leaderboard"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/leaderboard_gameOverLayot"
+        style="@style/CleanOrange"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#FFFFFF"
+        android:textColor="#FFB300" />
+
+    <Button
+        style="@style/CleanOrange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:onClick="loadGameAgain"
+        android:text="@string/tryAgain"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        style="@style/CleanOrange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:onClick="backToMainMenu"
+        android:text="@string/backToMenu"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

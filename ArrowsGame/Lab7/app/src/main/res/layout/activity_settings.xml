@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFB300"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/CleanOrange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="#000000"
+        android:text="@string/settings"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        style="@style/CleanOrange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back"
+        android:text="@string/volume"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/volumeSeekBar"
+        style="@style/CleanOrange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back"
+        android:max="100"
+        android:progress="50" />
+
+    <Button
+        android:onClick="backToMainMenu"
+        style="@style/CleanOrange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:text="@string/backToMenu"
+        android:textColor="#FFFFFF" />
+</LinearLayout>
